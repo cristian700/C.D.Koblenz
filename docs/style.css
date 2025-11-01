@@ -1,0 +1,113 @@
+/* style.css - Club Deportivo Koblenz */
+:root{
+  --blue:#06247a; /* azul oscuro */
+  --gray:#666;
+  --accent:#0b3d91;
+  --bg:#f7f7f7;
+  --white:#fff;
+  --maxw:1100px;
+  --phone: 720px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, "Helvetica Neue", Arial, sans-serif;
+  color:#111;
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+
+.header{
+  background:linear-gradient(rgba(6,36,122,0.6), rgba(6,36,122,0.6)), url('img/5E198C4E-E7FC-459A-9060-EC59B89D6E6D.jpeg') center/cover no-repeat;
+  color:var(--white);
+  padding:48px 16px;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:var(--maxw);
+  margin:0 auto;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand img{width:64px;height:64px;object-fit:contain;border-radius:50%;background:var(--white);padding:6px}
+.brand h1{margin:0;font-size:20px;letter-spacing:1px}
+.menu{display:flex;gap:18px}
+.menu a{color:var(--white);text-decoration:none;font-weight:600}
+.cta{
+  background:var(--accent);
+  padding:10px 14px;
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* hero */
+.hero{
+  max-width:var(--maxw);
+  margin:36px auto;
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.hero .intro{
+  flex:1;
+  background: rgba(255,255,255,0.06);
+  padding:22px;
+  border-radius:10px;
+  backdrop-filter:blur(4px);
+}
+.hero h2{margin:0 0 8px;font-size:34px}
+.hero p{margin:0 0 14px;color:#e6e6e6}
+.hero .buttons{display:flex;gap:12px}
+
+/* container */
+.container{
+  max-width:var(--maxw);
+  margin:28px auto;
+  padding:0 16px;
+}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:white;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(10,10,10,0.06);
+}
+.card img{width:100%;height:200px;object-fit:cover;border-radius:6px}
+
+/* table */
+.table{width:100%;border-collapse:collapse}
+.table th, .table td{padding:10px;border-bottom:1px solid #eee;text-align:left}
+
+/* tienda */
+.product{display:flex;gap:14px;align-items:center}
+.product img{width:160px;height:160px;object-fit:cover;border-radius:6px}
+.selects{display:flex;flex-direction:column;gap:8px;margin-left:auto}
+.whatsapp{
+  display:inline-block;
+  background:#25D366;color:white;padding:10px 12px;border-radius:8px;text-decoration:none;font-weight:700;
+}
+
+/* footer */
+.footer{background:#0b1220;color:white;padding:24px;margin-top:40px}
+.footer .fwrap{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.small{font-size:13px;color:#ddd}
+
+/* responsive */
+@media (max-width: 900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero{flex-direction:column;text-align:center}
+  .menu{display:none}
+}
+@media (max-width: 520px){
+  .grid{grid-template-columns:1fr}
+  .product{flex-direction:column}
+  .brand img{width:48px;height:48px}
+  .hero h2{font-size:26px}
+}
