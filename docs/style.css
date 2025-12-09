@@ -122,3 +122,12 @@ body{
   .brand img{width:48px;height:48px}
   .hero h2{font-size:26px}
 }
+/* Fondo exclusivo para la página de Plantel */
+.plantel-section {
+    background-image: url('img/fondo.png'); /* cambiá por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 40px 20px;
+}
